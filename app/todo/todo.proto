@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package todo;
+
+option go_package = "github.com/ts1106/go-grpc-todo-app/todo/";
+
+service Todo {
+    rpc GetItem(GetRequest) returns (Item) {}
+    rpc ListItem(ListRequest) returns (stream Item) {}
+    rpc CreateItem(stream Item) returns (Summary) {}
+    rpc ProgressChat(stream ProgressNote) returns (stream ProgressNote) {}
+}
+
+message Item {
+    int64 id = 1;
+    string title = 2;
+}
+
+message GetRequest {
+    int64 id = 1;
+}
+
+message ListRequest {
+    int64 low_id = 1;
+    int64 high_id = 2;
+}
+
+message Sammary {
+    int32 create_count = 1;
+}
+
+message ProgressNote {
+    int64 id = 1;
+    int16 per = 2;
+}
