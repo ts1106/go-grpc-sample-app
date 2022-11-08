@@ -1,0 +1,12 @@
+version: '3'
+services:
+  golang:
+    build:
+      context: ../app/
+      target: development
+    environment:
+      - TZ=Asia/Tokyo
+      - SHELL=/bin/bash
+    tty: true
+    volumes:
+      - ..:/workspace:cached

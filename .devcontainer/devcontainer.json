@@ -1,0 +1,28 @@
+{
+    "name": "go-grpc-sample-app",
+    "dockerComposeFile": ["./docker-compose.dev.yml"],
+    "service": "golang",
+    "workspaceFolder": "/workspace/app",
+    "remoteUser": "golang",
+  
+    // Set *default* container specific settings.json values on container create.
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash",
+      "go.useLanguageServer": true,
+      "[go]": {
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true
+        }
+      },
+      "[go.mod]": {
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true
+        }
+      },
+      "editor.formatOnSave": true
+    },
+  
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": ["golang.Go"]
+  }
+  
