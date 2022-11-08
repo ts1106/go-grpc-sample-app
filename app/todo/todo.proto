@@ -25,11 +25,11 @@ message ListRequest {
     int64 high_id = 2;
 }
 
-message Sammary {
+message Summary {
     int32 create_count = 1;
 }
 
 message ProgressNote {
     int64 id = 1;
-    int16 per = 2;
+    int32 per = 2;
 }
