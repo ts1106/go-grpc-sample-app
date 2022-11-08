@@ -1,5 +1,5 @@
 {
-    "name": "go-grpc-sample-app",
+    "name": "go-grpc-todo-app",
     "dockerComposeFile": ["./docker-compose.dev.yml"],
     "service": "golang",
     "workspaceFolder": "/workspace/app",

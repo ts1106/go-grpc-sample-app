@@ -1,1 +1,1 @@
-# go-grpc-sample-app
+# go-grpc-todo-app
